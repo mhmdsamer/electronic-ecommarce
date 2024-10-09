@@ -1,0 +1,453 @@
+and this si css code /* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+header {
+    background-color: #343a40; /* Dark gray for header */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #17a2b8; /* Light blue on hover */
+    transform: scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff; /* White for hamburger icon */
+    margin: 4px 0;
+}
+
+/* Carousel Styles */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Card Section Styles */
+.card-section {
+    padding: 40px 20px;
+    background-color: #ffffff; /* White for card section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #343a40; /* Dark gray for headings */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f8f9fa; /* Light gray for cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Button Styles */
+.buy-button {
+    background-color: #17a2b8; /* Light blue for buttons */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #138496; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+/* Testimonial Section Styles */
+.testimonial-section {
+    padding: 40px 20px;
+    background-color: #ffffff; /* White for testimonial section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #343a40; /* Dark gray for headings */
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #f8f9fa; /* Light gray for testimonials */
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark gray for footer */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 15px;
+}
+
+.footer-links a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #17a2b8; /* Light blue on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #343a40; /* Dark gray for mobile menu */
+        top: 60px;
+        right: 0;
+        width: 200px;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* News Section Styles */
+.news-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Light gray for news section */
+    text-align: center;
+}
+
+.news-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #343a40; /* Dark gray for headings */
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #ffffff; /* White for news items */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    color: #343a40; /* Dark gray for news item headings */
+}
+
+.news-item p {
+    color: #6c757d; /* Gray for news item text */
+}
+
+.read-more {
+    background-color: #17a2b8; /* Light blue for buttons */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #138496; /* Darker blue on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Best Sellers Section Styles */
+.best-sellers-section {
+    padding: 40px 20px;
+    background-color: #ffffff; /* White background for the section */
+    text-align: center;
+}
+
+.best-sellers-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #343a40; /* Dark gray for headings */
+}
+
+.best-sellers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.best-seller {
+    background-color: #f8f9fa; /* Light gray for best seller items */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px; /* Set width for cards */
+    transition: transform 0.3s ease;
+}
+
+.best-seller:hover {
+    transform: translateY(-5px);
+}
+
+.best-seller img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.best-seller h3 {
+    font-size: 1.5rem;
+    color: #343a40; /* Dark gray for product titles */
+}
+
+.best-seller p {
+    color: #6c757d; /* Gray for product prices */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .best-sellers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Latest News Section Styles */
+.latest-news-section {
+    padding: 40px 20px;
+    background-color: #ffffff; /* White background for the section */
+    text-align: center;
+}
+
+.latest-news-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #343a40; /* Dark gray for headings */
+}
+
+.latest-news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #f8f9fa; /* Light gray for news items */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px; /* Set width for news items */
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    color: #343a40; /* Dark gray for news titles */
+}
+
+.news-item p {
+    color: #6c757d; /* Gray for news descriptions */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .latest-news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Customer Reviews Section Styles */
+.customer-reviews-section {
+    padding: 40px 20px;
+    background-color: #ffffff; /* White background for the section */
+    text-align: center;
+}
+
+.customer-reviews-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #343a40; /* Dark gray for headings */
+}
+
+.customer-reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review {
+    background-color: #f8f9fa; /* Light gray for review items */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px; /* Set width for review cards */
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+}
+
+.review h4 {
+    font-size: 1.2rem;
+    color: #343a40; /* Dark gray for reviewer names */
+}
+
+.review p {
+    color: #6c757d; /* Gray for review text */
+}
+
+.rating {
+    color: #ffcc00; /* Gold color for ratings */
+    font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .customer-reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
